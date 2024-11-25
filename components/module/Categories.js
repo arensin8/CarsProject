@@ -8,22 +8,30 @@ import Sport from "../icons/Sport";
 function Categories() {
   return (
     <div className={styles.container}>
-      <div>
-        <p>Sedan</p>
-        <Sedan />
-      </div>
+      <Link href='/categories/sedan'>
+        <div>
+          <p>Sedan</p>
+          <Sedan />
+        </div>
+      </Link>
+      <Link href='/categories/suv'>
       <div>
         <p>SUV</p>
         <Suv />
       </div>
+      </Link>
+      <Link href='/categories/hatchback'>
       <div>
         <p>Hatchback</p>
         <Hatchback />
       </div>
+      </Link>
+      <Link href='/categories/sport'>
       <div>
         <p>Sport cars</p>
         <Sport />
       </div>
+      </Link>
     </div>
   );
 }
