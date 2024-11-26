@@ -1,4 +1,5 @@
 import Categories from "@/components/module/Categories";
+import SearchBar from "@/components/module/SearchBar";
 import CarsPage from "@/components/templates/CarsPage";
 import carsData from "@/data/carsData";
 import React from "react";
@@ -6,6 +7,7 @@ import React from "react";
 const Details = () => {
   return (
     <div>
+      <SearchBar />
       <Categories />
       <CarsPage data={carsData} />
     </div>

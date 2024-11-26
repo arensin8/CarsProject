@@ -1,11 +1,9 @@
-import React from 'react';
+import CategorizedCarsList from "@/components/templates/CategorizedCarsList";
+import carsData from "@/data/carsData";
 
 const Hatchback = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const hatchbackCars = carsData.filter((car) => car.category === "hatchback");
+  return <CategorizedCarsList data={hatchbackCars} />;
 };
 
 export default Hatchback;
