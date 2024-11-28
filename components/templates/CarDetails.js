@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+import Back from "../icons/Back";
 import Calender from "../icons/Calender";
 import Company from "../icons/Company";
 import Location from "../icons/Location";
@@ -7,6 +9,10 @@ import Road from "../icons/Road";
 import styles from "./CarDetails.module.css";
 
 const CarDetails = (props) => {
+  const router = useRouter();
+  const backHandler = () => {
+    router.back();
+  };
   const {
     id,
     name,
@@ -20,6 +26,10 @@ const CarDetails = (props) => {
   } = props;
   return (
     <div className={styles.container}>
+      <div className={styles.back} onClick={backHandler}>
+        <Back />
+        <p>Back</p>
+      </div>
       <img src={image} className={styles.image} alt="" />
       <h3 className={styles.header}>
         {name} {model}

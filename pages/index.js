@@ -1,9 +1,19 @@
-import Details from "./cars";
+import AllCarsButton from "@/components/module/AllCarsButton";
+import Categories from "@/components/module/Categories";
+import SearchBar from "@/components/module/SearchBar";
+import CarsPage from "@/components/templates/CarsPage";
+import carsData from "@/data/carsData";
 
-export default function Home() {
+const index = () => {
+  const cars = carsData.slice(0, 3);
   return (
     <>
-      <Details />
+      <SearchBar />
+      <Categories />
+      <AllCarsButton />
+      <CarsPage data={cars} />
     </>
   );
-}
+};
+
+export default index;
